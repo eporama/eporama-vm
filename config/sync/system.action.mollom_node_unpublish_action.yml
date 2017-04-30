@@ -1,0 +1,11 @@
+uuid: 92791aeb-e88c-44e6-a906-6cd2d18eb8eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - mollom
+id: mollom_node_unpublish_action
+label: 'Report to Mollom and unpublish'
+type: node
+plugin: mollom_node_unpublish_action
+configuration: {  }

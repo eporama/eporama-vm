@@ -1,0 +1,29 @@
+langcode: en
+id: comment_comment_form
+uuid: 0ec49bac-84c0-4236-bb57-87c60d66084e
+label: 'Default comments form'
+mode: '2'
+enabled_fields:
+  - 'subject][0][value'
+  - 'comment_body][0][value'
+  - name
+  - mail
+  - homepage
+  - hostname
+  - thread
+  - entity_type
+  - field_name
+checks:
+  - spam
+strictness: normal
+unsure: captcha
+discard: '1'
+moderation: null
+mapping:
+  post_title: 'subject][0][value'
+  author_name: name
+  author_mail: mail
+  post_id: cid
+module: comment
+entity: comment
+bundle: comment
