@@ -1,0 +1,2 @@
+[drupalvm]
+162.243.225.185 ansible_ssh_user=eporama
