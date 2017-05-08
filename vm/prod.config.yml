@@ -14,3 +14,16 @@ apache_vhosts:
   - servername: "{{ drupal_domain }}"
     documentroot: "{{ drupal_core_path }}"
     extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+drupalvm_cron_jobs:
+  - name: "Drupal Cron"
+    minute: "*/15"
+    job: "{{ drush_path }} -r {{ drupal_core_path }} core-cron --quiet"
+  - name: "Drush database dump"
+    hour: "1"
+    minute: "0"
+    job: "drush sql-dump --structure-tables-key=common --root=/var/www/drupal/web --uri=eporama.com  --gzip --result-file=/home/eporama/drush-backups/eporama-$(date +%F).sql >> /home/eporama/cronlogs/db-backups.log"
+  - name: "Move backup to S3"
+    hour: "2"
+    minute: "10"
+    job: "s3cmd --no-guess-mime-type put /home/eporama/drush-backups/eporama-$(date +%F).sql.gz s3://eporama"
