@@ -18,10 +18,10 @@ module:
   file: 0
   filter: 0
   help: 0
+  honeypot: 0
   image: 0
   link: 0
   menu_ui: 0
-  mollom: 0
   node: 0
   options: 0
   path: 0

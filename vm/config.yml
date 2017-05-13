@@ -38,5 +38,5 @@ varnish_listen_port: "80"
 varnish_default_backend_port: "81"
 
 drupal_enable_modules:
-  - mollom
+  - honeypot
   - codefilter

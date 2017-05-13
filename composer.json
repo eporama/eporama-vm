@@ -22,6 +22,7 @@
         "drupal/codefilter": "^1.0",
         "drupal/console": "~1.0",
         "drupal/core": "~8.0",
+        "drupal/honeypot": "1.x",
         "drupal/mollom": "^1.0",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^0.2.1",

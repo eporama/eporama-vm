@@ -1,0 +1,20 @@
+uuid: 73a75f11-676f-448d-a408-8da6ada5482e
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - omega
+id: omega_user_login
+theme: omega
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: visible
+visibility: {  }
